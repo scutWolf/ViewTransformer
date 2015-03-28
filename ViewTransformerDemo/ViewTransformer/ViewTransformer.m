@@ -21,9 +21,9 @@
 
 
 
--(instancetype)initWithIconImage:(UIImage *)image andSize:(CGSize)size{
+-(instancetype)initWithIconImage:(UIImage *)image{
 
-    CGRect frame = CGRectMake(0, 0, size.width, size.height);
+    CGRect frame = CGRectMake(0, 0, 25.0, 25.0);
     self = [super initWithFrame:frame];
     self.hidden = YES;
     
@@ -31,7 +31,7 @@
     self.borderWidth = 1.0;
     
     UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
-    imageView.frame = CGRectMake(0, 0, size.width, size.height);
+    imageView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
     [self addSubview:imageView];
     
     return self;
@@ -85,25 +85,27 @@
 
 -(void)correctTransformerPoint{
     
-    NSAssert(!self.targetView,@"No targetView");
+    if (!self.targetView) {
+        NSLog(@"no,targetView");
+    }
+    else{
+        self.hidden = NO;
     
-    self.hidden = NO;
-    
-    CGFloat currentRadian = [self.targetView rotatedRadian];
-    CGSize currentSize = self.targetView.bounds.size;
-    
-    
-    
-    CGPoint targetViewCenter = self.targetView.center;
-    CGPoint preRightDownPoint  = CGPointMake(currentSize.width, currentSize.height);
-    CGFloat x = preRightDownPoint.x * cos(currentRadian) - preRightDownPoint.y *sin(currentRadian);
-    CGFloat y = preRightDownPoint.x * sin(currentRadian) + preRightDownPoint.y *cos(currentRadian);
-    
-    self.center = CGPointMake(targetViewCenter.x + x/2,targetViewCenter.y + y/2);
+        CGFloat currentRadian = [self.targetView rotatedRadian];
+        CGSize currentSize = self.targetView.bounds.size;
     
     
+    
+        CGPoint targetViewCenter = self.targetView.center;
+        CGPoint preRightDownPoint  = CGPointMake(currentSize.width, currentSize.height);
+        CGFloat x = preRightDownPoint.x * cos(currentRadian) - preRightDownPoint.y *sin(currentRadian);
+        CGFloat y = preRightDownPoint.x * sin(currentRadian) + preRightDownPoint.y *cos(currentRadian);
+    
+        self.center = CGPointMake(targetViewCenter.x + x/2,targetViewCenter.y + y/2);
+    
+    
+    }
 }
-
 -(void)handlePanGesture:(UIPanGestureRecognizer *)recognizer{
     
     CGFloat currentRadian;
