@@ -24,7 +24,7 @@
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePanGesture:)];
     
     //test view
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     view.backgroundColor = [UIColor greenColor];
     [view addGestureRecognizer:panGesture];
     
@@ -37,7 +37,7 @@
                                                    options:NSStringDrawingUsesLineFragmentOrigin
                                                 attributes:@{NSFontAttributeName:font}
                                                    context:nil];
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(100, 100, textRect.size.width, textRect.size.height)];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(100, 300, textRect.size.width, textRect.size.height)];
     label.text=labelString;
     label.font = font;
     label.userInteractionEnabled = YES;
