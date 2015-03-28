@@ -54,7 +54,8 @@
     if (!_viewTransformer) {
         
         //size of transformer
-        _viewTransformer = [[ViewTransformer alloc]initWithIconImage:[UIImage imageNamed:@"addIcon"]];
+        CGSize size = CGSizeMake(25.0, 25.0);
+        _viewTransformer = [[ViewTransformer alloc]initWithIconImage:[UIImage imageNamed:@"addIcon"] size:size];
         [self.view addSubview:_viewTransformer];
     }
     return _viewTransformer;

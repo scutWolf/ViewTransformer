@@ -21,9 +21,9 @@
 
 
 
--(instancetype)initWithIconImage:(UIImage *)image{
+-(instancetype)initWithIconImage:(UIImage *)image size:(CGSize)size{
 
-    CGRect frame = CGRectMake(0, 0, 25.0, 25.0);
+    CGRect frame = CGRectMake(0, 0, size.width, size.height);
     self = [super initWithFrame:frame];
     self.hidden = YES;
     

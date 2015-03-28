@@ -14,7 +14,7 @@
 @property (strong,nonatomic) UIColor *borderColor;
 @property (assign,nonatomic) CGFloat borderWidth;
 
--(instancetype)initWithIconImage:(UIImage *)image;
+-(instancetype)initWithIconImage:(UIImage *)image size:(CGSize)size;
 -(void)setTargetView:(UIView *)targetView;
 -(void)correctTransformerPoint;
 
