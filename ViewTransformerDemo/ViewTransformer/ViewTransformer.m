@@ -20,23 +20,15 @@
 @implementation ViewTransformer
 
 
--(instancetype)initWithSize:(CGSize)size{
-
-    CGRect frame = CGRectMake(0, 0, size.width, size.height);
-    self = [super initWithFrame:frame];
-    self.hidden = YES;
-    self.backgroundColor = [UIColor orangeColor];
-    self.layer.cornerRadius = self.frame.size.width/2.0;
-    
-    
-    return self;
-}
 
 -(instancetype)initWithIconImage:(UIImage *)image andSize:(CGSize)size{
 
     CGRect frame = CGRectMake(0, 0, size.width, size.height);
     self = [super initWithFrame:frame];
     self.hidden = YES;
+    
+    self.borderColor = [UIColor orangeColor];
+    self.borderWidth = 1.0;
     
     UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
     imageView.frame = CGRectMake(0, 0, size.width, size.height);
@@ -67,8 +59,8 @@
         
         _targetView.layer.borderWidth = 0;
         _targetView = targetView;
-        _targetView.layer.borderWidth = 1.0;
-        _targetView.layer.borderColor = [[UIColor orangeColor]CGColor];
+        _targetView.layer.borderWidth = self.borderWidth;
+        _targetView.layer.borderColor = [self.borderColor CGColor];
         _targetView.layer.allowsEdgeAntialiasing = YES;
         [self correctTransformerPoint];
         
@@ -78,10 +70,16 @@
     
 }
 
--(void)setBoarderColor:(UIColor *)boarderColor{
+-(void)setBorderColor:(UIColor *)borderColor{
 
-    _boarderColor = boarderColor;
-    self.targetView.layer.borderColor = [boarderColor CGColor];
+    _borderColor = borderColor;
+    self.targetView.layer.borderColor = [borderColor CGColor];
+}
+
+-(void)setBorderWidth:(CGFloat)borderWidth{
+
+    _borderWidth = borderWidth;
+    self.targetView.layer.borderWidth = borderWidth;
 
 }
 

@@ -70,6 +70,7 @@
     if (recognizer.state == UIGestureRecognizerStateChanged ||
         recognizer.state == UIGestureRecognizerStateEnded){
         
+        
         CGPoint translation = [recognizer translationInView:self.view];
         CGPoint point = CGPointMake (translation.x+recognizer.view.center.x,
                                      translation.y+recognizer.view.center.y);
