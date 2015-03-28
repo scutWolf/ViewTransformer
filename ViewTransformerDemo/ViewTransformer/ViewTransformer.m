@@ -86,26 +86,27 @@
 -(void)correctTransformerPoint{
     
     if (!self.targetView) {
-        NSLog(@"no,targetView");
+        NSLog(@"no targetView!");
     }
     else{
+        
         self.hidden = NO;
-    
+        
         CGFloat currentRadian = [self.targetView rotatedRadian];
         CGSize currentSize = self.targetView.bounds.size;
-    
-    
-    
+        
+        
+        
         CGPoint targetViewCenter = self.targetView.center;
         CGPoint preRightDownPoint  = CGPointMake(currentSize.width, currentSize.height);
         CGFloat x = preRightDownPoint.x * cos(currentRadian) - preRightDownPoint.y *sin(currentRadian);
         CGFloat y = preRightDownPoint.x * sin(currentRadian) + preRightDownPoint.y *cos(currentRadian);
-    
+        
         self.center = CGPointMake(targetViewCenter.x + x/2,targetViewCenter.y + y/2);
-    
-    
+        
     }
 }
+
 -(void)handlePanGesture:(UIPanGestureRecognizer *)recognizer{
     
     CGFloat currentRadian;
