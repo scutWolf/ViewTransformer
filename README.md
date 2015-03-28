@@ -37,5 +37,6 @@ import "ViewTransformer.h"
     [self.viewTransformer correctTransformerPoint];
     
 6.You can set the border color :
+-----------------------------------  
 ###
     self.viewTransformer.boarderColor = [UIColor greenColor];
