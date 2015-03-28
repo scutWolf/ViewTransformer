@@ -52,7 +52,6 @@
 -(ViewTransformer *)viewTransformer {
     
     if (!_viewTransformer) {
-        //_rightDownView = [self cornerViewToRotateInit:_rightDownView];
         
         //size of transformer
         CGSize size = CGSizeMake(25, 25);
