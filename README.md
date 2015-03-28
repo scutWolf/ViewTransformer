@@ -5,7 +5,7 @@ ViewTransformer
 -----------------------------------  
 import "ViewTransformer.h"
 
-2.Init the view transformer with add icon image 
+2.Init the view transformer with add-icon image and its size 
 -----------------------------------  
 ###
     @property (strong, nonatomic) ViewTransformer *viewTransformer;
