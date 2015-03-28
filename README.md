@@ -5,15 +5,17 @@ ViewTransformerDemo
 -----------------------------------  
 import "ViewTransformer.h"
 
-2.Init the view transformer @property (strong, nonatomic) ViewTransformer *viewTransformer;
+2.Init the view transformer with add icon image and its size
 -----------------------------------  
+###
+    @property (strong, nonatomic) ViewTransformer *viewTransformer;
 ###
     -(ViewTransformer *)viewTransformer {
 
         if (!_viewTransformer) {
           //size of transformer
            CGSize size = CGSizeMake(25, 25);
-           _viewTransformer = [[ViewTransformer alloc]initWithSize:size];
+           _viewTransformer = [[ViewTransformer alloc]initWithIconImage:[UIImage imageNamed:@"addIcon"] andSize:size];
            [self.view addSubview:_viewTransformer];
         }
         return _viewTransformer;
@@ -33,3 +35,7 @@ import "ViewTransformer.h"
 -----------------------------------  
 ###
     [self.viewTransformer correctTransformerPoint];
+    
+6.You can set the border color :
+###
+    self.viewTransformer.boarderColor = [UIColor greenColor];
