@@ -85,9 +85,8 @@
 
 -(void)correctTransformerPoint{
     
-    if (!self.targetView) {
-        NSLog(@"no targetView!");
-    }else{
+    NSAssert(!self.targetView,@"No targetView");
+    
     self.hidden = NO;
     
     CGFloat currentRadian = [self.targetView rotatedRadian];
@@ -101,7 +100,7 @@
     CGFloat y = preRightDownPoint.x * sin(currentRadian) + preRightDownPoint.y *cos(currentRadian);
     
     self.center = CGPointMake(targetViewCenter.x + x/2,targetViewCenter.y + y/2);
-    }
+    
     
 }
 
