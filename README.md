@@ -31,7 +31,7 @@ import "ViewTransformer.h"
 ###
     self.viewTransformer.targetView = nil;
 
-5.To correct the point of the viewTransformer when the targetView moving of moved:
+5.To correct the point of the viewTransformer when the targetView moving or moved:
 -----------------------------------  
 ###
     [self.viewTransformer correctTransformerPoint];
