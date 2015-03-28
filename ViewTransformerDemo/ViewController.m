@@ -25,7 +25,7 @@
     
     //test view
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(10, 10, 100, 100)];
-    view.backgroundColor = [UIColor redColor];
+    view.backgroundColor = [UIColor greenColor];
     [view addGestureRecognizer:panGesture];
     
 
@@ -55,7 +55,7 @@
         
         //size of transformer
         CGSize size = CGSizeMake(25, 25);
-        _viewTransformer = [[ViewTransformer alloc]initWithSize:size];
+        _viewTransformer = [[ViewTransformer alloc]initWithIconImage:[UIImage imageNamed:@"addIcon"] andSize:size];
         [self.view addSubview:_viewTransformer];
     }
     return _viewTransformer;
@@ -69,7 +69,6 @@
     
     if (recognizer.state == UIGestureRecognizerStateChanged ||
         recognizer.state == UIGestureRecognizerStateEnded){
-        
         
         CGPoint translation = [recognizer translationInView:self.view];
         CGPoint point = CGPointMake (translation.x+recognizer.view.center.x,

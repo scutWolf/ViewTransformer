@@ -19,13 +19,6 @@
 
 @implementation ViewTransformer
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 -(instancetype)initWithSize:(CGSize)size{
 
@@ -38,6 +31,21 @@
     
     return self;
 }
+
+-(instancetype)initWithIconImage:(UIImage *)image andSize:(CGSize)size{
+
+    CGRect frame = CGRectMake(0, 0, size.width, size.height);
+    self = [super initWithFrame:frame];
+    self.hidden = YES;
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
+    imageView.frame = CGRectMake(0, 0, size.width, size.height);
+    [self addSubview:imageView];
+    
+    return self;
+
+}
+
 
 -(void)setTargetView:(UIView *)targetView{
     
@@ -68,6 +76,13 @@
     }
     
     
+}
+
+-(void)setBoarderColor:(UIColor *)boarderColor{
+
+    _boarderColor = boarderColor;
+    self.targetView.layer.borderColor = [boarderColor CGColor];
+
 }
 
 -(void)correctTransformerPoint{
@@ -146,7 +161,6 @@
         }
         
         CGAffineTransform transform = CGAffineTransformMakeRotation(self.radian + radian * direction);
-        //CGAffineTransform newTransform = CGAffineTransformRotate(currentTransForm, radian * direction);
         self.targetView.transform =transform;
         
         CGFloat scale = c/b;

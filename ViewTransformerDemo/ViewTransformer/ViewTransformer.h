@@ -11,8 +11,10 @@
 @interface ViewTransformer : UIView
 
 @property (strong,nonatomic) UIView *targetView;
+@property (strong,nonatomic) UIColor *boarderColor;
 
 -(instancetype)initWithSize:(CGSize)size;
+-(instancetype)initWithIconImage:(UIImage *)image andSize:(CGSize)size;
 -(void)setTargetView:(UIView *)targetView;
 -(void)correctTransformerPoint;
 
