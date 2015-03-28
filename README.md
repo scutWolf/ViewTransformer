@@ -1,4 +1,4 @@
-ViewTransformerDemo
+ViewTransformer
 ===================================  
 
 1.Import first
