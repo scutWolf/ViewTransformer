@@ -6,7 +6,7 @@ What ViewTransformer can do
 Using ViewTransformer,you can transform SubClass Of UIView,such as UIImageView,UILabel.
 Transforming UIlabel,font size of it would transform automatically itself.
 
-![](https://coding.net/u/QitangLu/p/ViewTransformer/git/raw/master/ViewTransformerDemo/demo.gif)
+![](https://github.com/scutWolf/ViewTransformer/blob/master/ViewTransformerDemo/demo.gif)
 
 How to use ViewTransformer
 -----------------------------------
