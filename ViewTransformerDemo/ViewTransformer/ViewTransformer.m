@@ -47,7 +47,8 @@
         _targetView = nil;
         self.hidden = YES;
         
-    }else{
+    }
+    else{
     
         self.layer.zPosition = targetView.layer.zPosition + 1;
         
@@ -63,7 +64,6 @@
         _targetView.layer.borderColor = [self.borderColor CGColor];
         _targetView.layer.allowsEdgeAntialiasing = YES;
         [self correctTransformerPoint];
-        
         
     }
     
@@ -156,7 +156,8 @@
         
         if (prcXpcl >= 0) {
             direction = -1;
-        }else{
+        }
+        else{
             direction = 1;
         }
         
@@ -195,11 +196,8 @@
                     break;
                     
                 }
-                
-                
             }
         }
-        
     }
 
     

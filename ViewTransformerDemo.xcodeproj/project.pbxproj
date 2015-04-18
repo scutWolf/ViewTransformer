@@ -16,6 +16,7 @@
 		793D6D191AC69CE70078E39D /* ViewTransformerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D6D181AC69CE70078E39D /* ViewTransformerDemoTests.m */; };
 		793D6D281AC69D0C0078E39D /* UIView+Radian.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D6D251AC69D0C0078E39D /* UIView+Radian.m */; };
 		793D6D291AC69D0C0078E39D /* ViewTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D6D271AC69D0C0078E39D /* ViewTransformer.m */; };
+		798A85871AD8CB9F0000BE52 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 798A85861AD8CB9F0000BE52 /* demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		793D6D251AC69D0C0078E39D /* UIView+Radian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Radian.m"; sourceTree = "<group>"; };
 		793D6D261AC69D0C0078E39D /* ViewTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTransformer.h; sourceTree = "<group>"; };
 		793D6D271AC69D0C0078E39D /* ViewTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTransformer.m; sourceTree = "<group>"; };
+		798A85861AD8CB9F0000BE52 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		793D6CFC1AC69CE70078E39D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				798A85861AD8CB9F0000BE52 /* demo.gif */,
 				793D6CFD1AC69CE70078E39D /* Info.plist */,
 				793D6CFE1AC69CE70078E39D /* main.m */,
 			);
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				793D6D081AC69CE70078E39D /* Main.storyboard in Resources */,
+				798A85871AD8CB9F0000BE52 /* demo.gif in Resources */,
 				793D6D0D1AC69CE70078E39D /* LaunchScreen.xib in Resources */,
 				793D6D0A1AC69CE70078E39D /* Images.xcassets in Resources */,
 			);
@@ -432,6 +436,7 @@
 				793D6D1E1AC69CE70078E39D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		793D6D1F1AC69CE70078E39D /* Build configuration list for PBXNativeTarget "ViewTransformerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +445,7 @@
 				793D6D211AC69CE70078E39D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
