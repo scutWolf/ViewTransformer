@@ -13,7 +13,9 @@ How to use ViewTransformer
 
 1.Import first
 ###
-    import "ViewTransformer.h"
+```objective-c
+import "ViewTransformer.h"
+```
 
 2.Init the view transformer with add-icon image and its size 
 ###
@@ -33,18 +35,22 @@ How to use ViewTransformer
 ```
 
 3.Set the view to transform:
-###
-    self.viewTransformer.targetView = targetView;
+```objective-c
+self.viewTransformer.targetView = targetView;
+```
 
 4.To remove the focus :
-###
-    self.viewTransformer.targetView = nil;
+```objective-c
+self.viewTransformer.targetView = nil;
+```
 
 5.To correct the point of the viewTransformer when the targetView moving or moved:
-###
-    [self.viewTransformer correctTransformerPoint];
-    
+```objective-c
+[self.viewTransformer correctTransformerPoint];
+```
+
 6.You can set the border color or border width:
-###
-    self.viewTransformer.borderColor = [UIColor greenColor];
-    self.viewTransformer.borderWidth = 2.0;
+```objective-c
+self.viewTransformer.borderColor = [UIColor greenColor];
+self.viewTransformer.borderWidth = 2.0;
+```
