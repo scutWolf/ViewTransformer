@@ -19,16 +19,18 @@ How to use ViewTransformer
 ###
     @property (strong, nonatomic) ViewTransformer *viewTransformer;
 ###
-    -(ViewTransformer *)viewTransformer {
 
-        if (!_viewTransformer) {
-        //size of transformer
-        CGSize size = CGSizeMake(25.0, 25.0);
-        _viewTransformer = [[ViewTransformer alloc]initWithIconImage:[UIImage imageNamed:@"addIcon"] size:size];
-           [self.view addSubview:_viewTransformer];
-        }
-        return _viewTransformer;
+```objective-c
+-(ViewTransformer *)viewTransformer {
+    if (!_viewTransformer) {
+    //size of transformer
+    CGSize size = CGSizeMake(25.0, 25.0);
+    _viewTransformer = [[ViewTransformer alloc]initWithIconImage:[UIImage imageNamed:@"addIcon"] size:size];
+       [self.view addSubview:_viewTransformer];
     }
+    return _viewTransformer;
+}
+```
 
 3.Set the view to transform:
 ###
