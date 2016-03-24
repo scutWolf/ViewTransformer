@@ -85,17 +85,4 @@
 
 }
 
-- (void)testMethod
-{
-    // Hello This is a test method
-    // I added text here
-    
-    //rilebaole
-
-    
-    //1
-    //2
-    //3
-}
-
 @end
